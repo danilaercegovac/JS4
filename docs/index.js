@@ -1,8 +1,6 @@
-// Берём часть после вопросительного знака
-const query = window.location.search; // пример: "?123456"
-const res = query.replace("?", "");
-const massive = JSON.parse(res);
+const query = window.location.search;   // "?[5,3,1]"
+const res = query.slice(1);             // "[5,3,1]"
+const massive = JSON.parse(res);        // [5,3,1]
 
-document.title = toString(massive.sort());
-
+document.title = massive.sort().toString();
 
